@@ -62,12 +62,15 @@ body {
     color: var(--Dark-Text);
 }
 
-.option-container {
+.option-container, .step2Container{
     position: relative;
     width: 99vw;
     max-width: 310px;
     height: 200px;
     margin: 6rem auto 0 auto;
+}
+
+.option-container{
     background-image: url('./images/bg-triangle.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -105,4 +108,20 @@ body {
     background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
     bottom: -35%;
     left: 34%;
+}
+
+.step2Container{
+    justify-content:space-between;
+}
+
+.step2Container #paper-option, .step2Container #scissor-option, .step2Container #rock-option{
+    position:initial;
+}
+
+#user-choice, #computer-choice{
+    flex-direction:column;
+    gap:1.5rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:600;
 }

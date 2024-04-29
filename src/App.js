@@ -1,6 +1,6 @@
 import './style.css';
 import Nav from './components/Nav.js';
-import Step1 from './components/Step1.js';
+import State from './components/State.js';
 
 function App() {
   
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Nav score={currentScore} />
-      <Step1 />
+      <State />
     </div>
   );
 }
