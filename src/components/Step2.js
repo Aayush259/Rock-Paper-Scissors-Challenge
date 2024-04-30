@@ -6,20 +6,32 @@ function Step2(props) {
 
     console.log(props.option)
 
+    const ButtonsIdArray = ['paper-option', 'rock-option', 'scissor-option']
+
     let imgSrc;
     let buttonId;
+    let compImgSrc;
+    let compButtonId = ButtonsIdArray[Math.floor(Math.random() * 3)];
 
     if (props.option === 'paper') {
         imgSrc = iconPaper;
-        buttonId = 'paper-option'
+        buttonId = ButtonsIdArray[0];
     }
     else if (props.option === 'rock') {
         imgSrc = iconRock;
-        buttonId = 'rock-option';
+        buttonId = ButtonsIdArray[1];
     }
     else if (props.option === 'scissor') {
         imgSrc = iconScissor;
-        buttonId = 'scissor-option';
+        buttonId = ButtonsIdArray[2];
+    }
+
+    if (compButtonId === 'paper-option') {
+        compImgSrc = iconPaper;
+    } else if (compButtonId === 'rock-option') {
+        compImgSrc = iconRock;
+    } else if (compButtonId === 'scissor-option') {
+        compImgSrc = iconScissor;
     }
 
     return (
@@ -35,9 +47,9 @@ function Step2(props) {
             </div>
             <div id="computer-choice" className='flex'>
                 <p>The House Picked</p>
-                <button className='option-button flex' id={buttonId} disabled>
+                <button className='option-button flex' id={compButtonId} disabled>
                     <span className='flex'>
-                        <img src={imgSrc} alt="Selected option" className='op-img' />
+                        <img src={compImgSrc} alt="Selected option" className='op-img' />
                     </span>
                 </button>
             </div>
