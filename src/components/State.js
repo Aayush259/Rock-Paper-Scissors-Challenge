@@ -5,18 +5,22 @@ import Step2 from './Step2';
 
 function State() {
 
-    const [step, setStep] = useState(1);
-    const [step2Option, setStep2Option] = useState(null);
+    const [gameState, setGameState] = useState({
+        step: 1,
+        step2Option: null,
+    });
 
     const handleNextStep = (option) => {
-        setStep2Option(option);
-        setStep(2);
+        setGameState({
+            step: 2,
+            step2Option: option,
+        });
     }
 
     return (
         <>
-            {step === 1 ? <Step1 onNextStep={handleNextStep} /> : null}
-            {step === 2 ? <Step2 option={step2Option} /> : null}
+            {gameState.step === 1 ? <Step1 onNextStep={handleNextStep} /> : null}
+            {gameState.step === 2 ? <Step2 option={gameState.step2Option} /> : null}
         </>
     );
 
