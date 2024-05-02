@@ -4,6 +4,7 @@ import State from './components/State.js';
 
 function App() {
   
+  // Current score which is being dispayed on the top
   let currentScore = 0;
 
   return (

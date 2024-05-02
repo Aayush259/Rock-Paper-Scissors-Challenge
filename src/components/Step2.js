@@ -6,6 +6,7 @@ function Step2(props) {
 
     console.log(props.option)
 
+    // Creating button id array (for styling purpose based on id)
     const ButtonsIdArray = ['paper-option', 'rock-option', 'scissor-option']
 
     let imgSrc;
@@ -13,6 +14,7 @@ function Step2(props) {
     let compImgSrc;
     let compButtonId = ButtonsIdArray[Math.floor(Math.random() * 3)];
 
+    // Setting image and button id to user selected option.
     if (props.option === 'paper') {
         imgSrc = iconPaper;
         buttonId = ButtonsIdArray[0];
@@ -26,6 +28,7 @@ function Step2(props) {
         buttonId = ButtonsIdArray[2];
     }
 
+    // Setting image and button id to randomly generated computer option.
     if (compButtonId === 'paper-option') {
         compImgSrc = iconPaper;
     } else if (compButtonId === 'rock-option') {

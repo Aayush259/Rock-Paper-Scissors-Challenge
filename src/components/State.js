@@ -5,11 +5,13 @@ import Step2 from './Step2';
 
 function State() {
 
+    // Initializing state for step 1 and step2Optin to null.
     const [gameState, setGameState] = useState({
         step: 1,
         step2Option: null,
     });
 
+    // This function updates the step.
     const handleNextStep = (option) => {
         setGameState({
             step: 2,
