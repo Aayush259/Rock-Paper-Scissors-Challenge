@@ -125,3 +125,19 @@ body {
     letter-spacing:1px;
     font-weight:600;
 }
+
+@media only screen and (max-width: 400px){
+
+    #header{
+        padding:0.5rem;
+        height:80px;
+    }
+
+    #header > *{
+        height:96% !important;
+    }
+
+    #score{
+        width:60px;
+    }
+}
