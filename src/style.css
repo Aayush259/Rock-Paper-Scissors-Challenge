@@ -92,19 +92,19 @@ body {
     border-radius: 100px;
 }
 
-#paper-option {
+#paper {
     background-image: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     top: -20%;
     left: -10%;
 }
 
-#scissor-option {
+#scissor {
     background-image: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
     top: -20%;
     right: -10%;
 }
 
-#rock-option {
+#rock {
     background-image: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
     bottom: -35%;
     left: 34%;
@@ -114,7 +114,7 @@ body {
     justify-content:space-between;
 }
 
-.step2Container #paper-option, .step2Container #scissor-option, .step2Container #rock-option{
+.step2Container #paper, .step2Container #scissor, .step2Container #rock{
     position:initial;
 }
 

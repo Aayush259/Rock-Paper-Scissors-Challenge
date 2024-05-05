@@ -1,6 +1,7 @@
 import './style.css';
 import React, {useState} from 'react';
 import Nav from './components/Nav';
+import State from './components/State';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <Nav Score={score} />
+      <State />
     </div>
   );
 }
