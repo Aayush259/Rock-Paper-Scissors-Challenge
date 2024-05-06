@@ -4,14 +4,26 @@ import scissor from '../images/icon-scissor.svg';
 import rock from '../images/icon-rock.svg';
 import Step2 from './Step2';
 
-function State() {
+// This function randomly returns one of the three options ['paper', 'scissor', or 'rock'].
+const GetComputerChoice = () => {
+    // Array of Options.
+    const Options = ['paper', 'scissor', 'rock'];
+
+    return Options[Math.floor(Math.random() * 3)];
+}
+
+function State(props) {
     
     // This function updates the step based on the selected userChoice.
     const updateStep = (stepNumber, selectedOption) => {
 
         // If the stepNumber is 2, then set Step2.
         if (stepNumber === 2){
-            let Step2Component = <Step2 UserChoice={selectedOption} />
+
+            // Getting random computer choice.
+            let computerChoice = GetComputerChoice();
+
+            let Step2Component = <Step2 UserChoice={selectedOption} CompChoice={computerChoice} />
             
             setStep(Step2Component)
         }

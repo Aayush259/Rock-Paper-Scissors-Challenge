@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Nav Score={score} />
-      <State />
+      <State UpdateScore={updateScore} />
     </div>
   );
 }
