@@ -12,6 +12,29 @@ const GetComputerChoice = () => {
     return Options[Math.floor(Math.random() * 3)];
 }
 
+// This function checks for a winner and return the winner if any, else returns draw.
+const CheckWinner = (userChoice, computerChoice) => {
+
+    let isUserWin = false;
+    let isDraw = false;
+
+    // Checking whether the user wins or its a tie.
+    if (userChoice === computerChoice) {
+        isDraw = true;
+    } else if ((userChoice === 'paper' && computerChoice === 'rock') || (userChoice === 'scissor' && computerChoice === 'paper') || (userChoice === 'rock' && computerChoice === 'scissor')) {
+        isUserWin = true;
+    }
+
+    // Returning the string for winner or draw.
+    if (isUserWin) {
+        return `User`;
+    } else if (isDraw) {
+        return `Draw`;
+    } else {
+        return `Computer`;
+    }
+}
+
 function State(props) {
     
     // This function updates the step based on the selected userChoice.
@@ -23,9 +46,16 @@ function State(props) {
             // Getting random computer choice.
             let computerChoice = GetComputerChoice();
 
+            // Getting winner.
+            let winner = CheckWinner(selectedOption, computerChoice)
+
             let Step2Component = <Step2 UserChoice={selectedOption} CompChoice={computerChoice} />
             
-            setStep(Step2Component)
+            // Setting step and updating score.
+            setStep(Step2Component);
+            if (winner === `User`) {
+                props.UpdateScore();
+            }
         }
     }
 
