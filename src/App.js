@@ -4,7 +4,7 @@ import Nav from './components/Nav';
 import State from './components/State';
 
 function App() {
-
+  
   // Initializing state for score.
   let [score, setScore] = useState(0)
   
@@ -14,9 +14,13 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App flex">
       <Nav Score={score} />
       <State UpdateScore={updateScore} />
+      <button id='rules'>Rules</button>
+      <div id="warning">
+        <p>This app is supposed to be run on device whose width is more than 230px</p>
+      </div>
     </div>
   );
 }
