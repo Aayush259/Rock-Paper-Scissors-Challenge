@@ -49,7 +49,7 @@ function State(props) {
             // Getting winner.
             let winner = CheckWinner(selectedOption, computerChoice)
 
-            let step2Component = <Step2 UserChoice={selectedOption} CompChoice={computerChoice} />
+            let step2Component = <Step2 UserChoice={selectedOption} CompChoice={computerChoice} Winner={winner} />
             
             // Setting step and updating score.
             setStep(step2Component);

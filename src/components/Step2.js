@@ -9,22 +9,38 @@ function Step2(props) {
     let imgSrc;
     let compImgSrc;
 
+    let winner = props.Winner;
+    let userActive = '';
+    let compActive = '';
+
+    if(winner === 'User') {
+        userActive = 'User';
+    } else if(winner === 'Computer') {
+        compActive = 'Computer';
+    }
+
     // Setting image according to user choice.
     if (props.UserChoice === 'paper') {
         imgSrc = paper;
+        userActive += '-paper';
     } else if (props.UserChoice === 'scissor') {
         imgSrc = scissor;
+        userActive += '-scissor';
     } else if (props.UserChoice === 'rock') {
         imgSrc = rock;
+        userActive += '-rock';
     }
 
     // Setting image according to computer choice.
     if (props.CompChoice === 'paper') {
         compImgSrc = paper;
+        compActive += '-paper';
     } else if (props.CompChoice === 'scissor') {
         compImgSrc = scissor;
+        compActive += '-scissor';
     } else if (props.CompChoice === 'rock') {
         compImgSrc = rock;
+        compActive += '-rock';
     }
 
     return (
@@ -33,7 +49,7 @@ function Step2(props) {
             
                 <div id='user-choice' className='flex'>
                     <p>You Picked</p>
-                    <button className='option-button flex' id={props.UserChoice}>
+                    <button className={`${userActive} option-button flex`} id={props.UserChoice}>
                         <span className='flex'>
                             <img src={imgSrc} alt='Your choice' />
                         </span>
@@ -42,7 +58,7 @@ function Step2(props) {
 
                 <div id='computer-choice' className='flex'>
                     <p>The House Picked</p>
-                    <button className='option-button flex' id={props.CompChoice}>
+                    <button className={`${compActive} option-button flex`} id={props.CompChoice}>
                         <span className='flex'>
                             <img src={compImgSrc} alt='Computer choice' />
                         </span>
