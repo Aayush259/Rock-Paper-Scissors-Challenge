@@ -7,9 +7,9 @@ import Step2 from './Step2';
 // This function randomly returns one of the three options ['paper', 'scissor', or 'rock'].
 const GetComputerChoice = () => {
     // Array of Options.
-    const Options = ['paper', 'scissor', 'rock'];
+    const options = ['paper', 'scissor', 'rock'];
 
-    return Options[Math.floor(Math.random() * 3)];
+    return options[Math.floor(Math.random() * 3)];
 }
 
 // This function checks for a winner and return the winner if any, else returns draw.
@@ -49,10 +49,10 @@ function State(props) {
             // Getting winner.
             let winner = CheckWinner(selectedOption, computerChoice)
 
-            let Step2Component = <Step2 UserChoice={selectedOption} CompChoice={computerChoice} />
+            let step2Component = <Step2 UserChoice={selectedOption} CompChoice={computerChoice} />
             
             // Setting step and updating score.
-            setStep(Step2Component);
+            setStep(step2Component);
             if (winner === `User`) {
                 props.UpdateScore();
             }
@@ -60,37 +60,37 @@ function State(props) {
     }
 
     // Step1 JSX.
-    const Step1 = <>
-        <div className="option-container">
+    const step1 = <>
+        <div className='option-container'>
 
-            <button className="option-button flex" id='paper' onClick={() => {
+            <button className='option-button flex' id='paper' onClick={() => {
                 updateStep(2, 'paper')
             }}>
                 <span className='flex'>
-                    <img src={paper} alt="Paper option" />
+                    <img src={paper} alt='Paper option' />
                 </span>
             </button>
 
-            <button className="option-button flex" id='scissor' onClick={() => {
+            <button className='option-button flex' id='scissor' onClick={() => {
                 updateStep(2, 'scissor')
             }}>
-                <span className="flex">
-                    <img src={scissor} alt="Scissor" />
+                <span className='flex'>
+                    <img src={scissor} alt='Scissor' />
                 </span>
             </button>
 
-            <button className="option-button flex" id='rock' onClick={() => {
+            <button className='option-button flex' id='rock' onClick={() => {
                 updateStep(2, 'rock')
             }}>
-                <span className="flex">
-                    <img src={rock} alt="Rock option" />
+                <span className='flex'>
+                    <img src={rock} alt='Rock option' />
                 </span>
             </button>
         </div>
     </>;
 
     // Initializing state for currentStep.
-    let [currentStep, setStep] = useState(Step1)
+    let [currentStep, setStep] = useState(step1)
 
     return currentStep;
 }

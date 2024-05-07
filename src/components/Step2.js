@@ -29,22 +29,22 @@ function Step2(props) {
 
     return (
         <>
-            <div className="step2Container flex">
+            <div className='step2Container flex'>
             
-                <div id="user-choice" className='flex'>
+                <div id='user-choice' className='flex'>
                     <p>You Picked</p>
-                    <button className="option-button flex" id={props.UserChoice}>
+                    <button className='option-button flex' id={props.UserChoice}>
                         <span className='flex'>
-                            <img src={imgSrc} alt="Your choice" />
+                            <img src={imgSrc} alt='Your choice' />
                         </span>
                     </button>
                 </div>
 
-                <div id="computer-choice" className='flex'>
+                <div id='computer-choice' className='flex'>
                     <p>The House Picked</p>
-                    <button className="option-button flex" id={props.CompChoice}>
-                        <span className="flex">
-                            <img src={compImgSrc} alt="Computer choice" />
+                    <button className='option-button flex' id={props.CompChoice}>
+                        <span className='flex'>
+                            <img src={compImgSrc} alt='Computer choice' />
                         </span>
                     </button>
                 </div>

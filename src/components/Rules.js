@@ -3,7 +3,7 @@ import rulesImage from '../images/image-rules.svg';
 function Rules(props) {
     return (
         <>
-        <div className="overlay-screen flex">
+        <div className='overlay-screen flex'>
             <div id='rules-container' className='flex'>
                 <header id='rules-header' className='flex'>
                     <h2>Rules</h2>

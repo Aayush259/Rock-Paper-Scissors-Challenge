@@ -18,24 +18,25 @@ function App() {
       setScore(score + 1);
   }
 
+  // This function closes the rules pop-up window.
   const closeRules = () => {
     setRules(<></>);
     setOpacity(1);
   }
 
   // This function decrease the opacity of whole app except the rules and display the rules on screen.
-  const RuleBtnHandler = () => {
+  const ruleBtnHandler = () => {
     setOpacity(0.5);
     setRules(<Rules CloseRules={closeRules} />);
   }
 
   return (
     <div className='flex' style={{flexDirection: 'column', width: '100vw'}}>
-      <div className="App flex" style={{opacity: opacity}}>
+      <div className='App flex' style={{opacity: opacity}}>
         <Nav Score={score} />
         <State UpdateScore={updateScore} />
-        <button id='rules' onClick={RuleBtnHandler}>Rules</button>
-        <div id="warning">
+        <button id='rules' onClick={ruleBtnHandler}>Rules</button>
+        <div id='warning'>
           <p>This app is supposed to be run on device whose width is more than 230px</p>
         </div>
       </div>

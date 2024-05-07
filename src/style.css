@@ -224,7 +224,7 @@ body{
     position:absolute;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width:400px){
     #header{
         padding:0.5rem;
         height:80px;
@@ -265,7 +265,7 @@ body{
     }
 }
 
-@media only screen and (max-width: 360px){
+@media only screen and (max-width:360px){
     .option-button{
         height:120px;
         width:120px;
@@ -281,7 +281,7 @@ body{
     }
 }
 
-@media only screen and (max-width: 340px){
+@media only screen and (max-width:340px){
     #rock{
         bottom:-10%;
         left:26%;
@@ -292,7 +292,7 @@ body{
     }
 }
 
-@media only screen and (max-width: 300px){
+@media only screen and (max-width:300px){
     .option-button{
         height:100px;
         width:100px;
@@ -317,14 +317,14 @@ body{
     }
 }
 
-@media only screen and (max-width: 250px){
+@media only screen and (max-width:250px){
     #rock{
         bottom:20%;
         left:22%;
     }
 }
 
-@media only screen and (max-width: 230px){
+@media only screen and (max-width:230px){
     body > *{
         visibility:hidden;
     }
