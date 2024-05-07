@@ -18,10 +18,15 @@ function App() {
       setScore(score + 1);
   }
 
+  const closeRules = () => {
+    setRules(<></>);
+    setOpacity(1);
+  }
+
   // This function decrease the opacity of whole app except the rules and display the rules on screen.
   const RuleBtnHandler = () => {
     setOpacity(0.5);
-    setRules(<Rules />);
+    setRules(<Rules CloseRules={closeRules} />);
   }
 
   return (
