@@ -217,6 +217,13 @@ body{
     max-width:100%;
 }
 
+.overlay-screen{
+    min-height:100vh;
+    min-width:100vw;
+    background-color:transparent;
+    position:absolute;
+}
+
 @media only screen and (max-width: 400px){
     #header{
         padding:0.5rem;
