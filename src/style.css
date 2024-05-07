@@ -205,6 +205,10 @@ body{
     margin:2rem auto 0 auto;
 }
 
+#rules-image > img{
+    max-width:100%;
+}
+
 @media only screen and (max-width: 400px){
     #header{
         padding:0.5rem;
@@ -225,6 +229,24 @@ body{
 
     #rules{
         margin:10rem auto 2rem auto;
+    }
+
+    #rules-container{
+        min-height:100vh;
+        display:block;
+        top:0;
+    }
+
+    #rules-header{
+        display:block !important;
+        text-align:center;
+        margin:10vh 0 15vh 0;
+    }
+
+    #close-btn{
+        position:absolute;
+        bottom:9vh;
+        left:45vw;
     }
 }
 
