@@ -49,13 +49,15 @@ function State(props) {
             // Getting winner.
             let winner = CheckWinner(selectedOption, computerChoice)
 
-            let step2Component = <Step2 UserChoice={selectedOption} CompChoice={computerChoice} Winner={winner} />
+            let step2Component = <Step2 UserChoice={selectedOption} CompChoice={computerChoice} Winner={winner} UpdateStep={updateStep} />
             
             // Setting step and updating score.
             setStep(step2Component);
             if (winner === `User`) {
                 props.UpdateScore();
             }
+        } else if (stepNumber === 1){
+            setStep(step1);
         }
     }
 

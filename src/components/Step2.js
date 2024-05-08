@@ -2,6 +2,7 @@ import React from 'react';
 import paper from '../images/icon-paper.svg';
 import scissor from '../images/icon-scissor.svg';
 import rock from '../images/icon-rock.svg';
+import Message from './Message';
 
 function Step2(props) {
 
@@ -12,11 +13,16 @@ function Step2(props) {
     let winner = props.Winner;
     let userActive = '';
     let compActive = '';
+    let message = ''
 
     if(winner === 'User') {
         userActive = 'User';
+        message = 'You Win';
     } else if(winner === 'Computer') {
         compActive = 'Computer';
+        message = 'You Lose'
+    } else {
+        message = 'Draw';
     }
 
     // Setting image according to user choice.
@@ -55,6 +61,8 @@ function Step2(props) {
                         </span>
                     </button>
                 </div>
+
+                <Message Message={message} UpdateStep={props.UpdateStep} />
 
                 <div id='computer-choice' className='flex'>
                     <p>The House Picked</p>
