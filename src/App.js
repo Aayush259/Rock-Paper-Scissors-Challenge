@@ -15,7 +15,7 @@ function App() {
   
   // This function will updates the score.
   const updateScore = () => {
-      setScore(score + 1);
+      setScore(prevScore => prevScore + 1);
   }
 
   // This function closes the rules pop-up window.
